@@ -4,7 +4,7 @@
 
 
 
-$conn = new PDO('mysql:host=localhost;dbname=COGIP', 'root', 'root');
+$conn = new PDO('mysql:host=database;dbname=COGIP', 'root', 'root');
 
 try {
     $conn;
@@ -12,3 +12,4 @@ try {
 catch(Execption $e) {
     die('erreur :' . $e->getMessage());    
 }
+?>
