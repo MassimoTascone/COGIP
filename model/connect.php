@@ -2,8 +2,6 @@
 // Connection to DB
 
 
-
-
 $conn = new PDO('mysql:host=database;dbname=COGIP', 'root', 'root');
 
 try {
