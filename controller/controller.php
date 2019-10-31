@@ -1,14 +1,16 @@
 <?php
    // controller
     
-require('model/connect.php');
 
-    foreach($data_people as $row)
-      {
-      echo '<p>Firstname : ' . $row['first_name'] . ', Lastname : '.$row['last_name'] . ' Email adress : ' . $row['email'] .'</p>'; 
-            } 
+$company = getCompany();
+$people = getPeople();
 
-    foreach($data_company as $company)
+function createTable($fetchFrom){
+  while ($data = $fetchFrom->fetch()) {
+    foreach($data as $value)
       {
-       echo '<p>' . $company['id_company'] . $company['name'] . $company['TVA'] . $company['country'] .'</p>';
+      echo $value;
+      //echo  $value['id_company'] . $value['name'] . $value['TVA'] . $value['country'];
       }
+  }
+}
