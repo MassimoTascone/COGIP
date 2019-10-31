@@ -11,7 +11,7 @@ $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
         }
 
 // request résultats de la BDD (model)
-$data = $conn->query ('SELECT * FROM people')->fetchAll();
+$data_people = $conn->query ('SELECT * FROM people')->fetchAll();
 
 $data_company = $conn->query('SELECT * FROM company')->fetchAll();
 
