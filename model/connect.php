@@ -1,12 +1,18 @@
 <?php
-// Connection to DB
 
-$conn = new PDO('mysql:host=database;dbname=COGIP', 'root', 'root');
+// connect à la base de donées (model)
 
-try {
-    $conn;
-}
-catch(Execption $e) {
-    die('erreur :' . $e->getMessage());    
-}
+$conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
+    try {
+        $conn;
+        }
+        catch(Execption $e) {
+              die('erreur :' . $e->getMessage());    
+        }
+
+// request résultats de la BDD (model)
+$data = $conn->query ('SELECT * FROM people')->fetchAll();
+
+$data_company = $conn->query('SELECT * FROM company')->fetchAll();
+
 ?>
