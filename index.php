@@ -1,19 +1,3 @@
-<?php
-
-
-// connect à la base de données (model)
- $conn=new PDO('mysql:host=localhost;dbname=COGIP', 'root' , '' ); 
-    try 
-      { 
-        $conn; 
-      } 
-        catch(Execption $e) 
-     { 
-        die('erreur :' . $e->getMessage());
-     }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,6 +30,15 @@
   </nav>
 
   <main>
+    <?php
+  // view
+    require('model/connect.php');
+    
+    require('controller/controller.php');
+    
+    createTable($company);
+    createTable($people);
+    ?>
 
   </main>
 
