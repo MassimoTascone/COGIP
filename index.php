@@ -32,10 +32,12 @@
   <main>
     <?php
   // view
-  
     require('model/connect.php');
     
     require('controller/controller.php');
+    
+    createTable($company);
+    createTable($people);
     ?>
 
   </main>
