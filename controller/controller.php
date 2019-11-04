@@ -13,7 +13,7 @@
 
 $companyFournisseur = getCompanyFournisseur();
 $companyClient = getCompanyClient();
-$people = getPeople();
+
 
 
 function createTable($fetchFrom){
