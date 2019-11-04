@@ -11,7 +11,8 @@
        //echo '<p>' . $company['id_company'] . $company['name'] . $company['TVA'] . $company['country'] .'</p>';
       //}
 
-$company = getCompany();
+$companyFournisseur = getCompanyFournisseur();
+$companyClient = getCompanyClient();
 $people = getPeople();
 
 
