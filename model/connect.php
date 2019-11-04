@@ -8,10 +8,10 @@ function getCompany() {
   return $data_company;
 }
 
-function getPeople() { 
+function getPeople() {
   $conn = dbConnect();
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-  $data_people = $conn->query('SELECT * FROM people');
+  $data_people = $conn->query('SELECT id_people, first_name, last_name, email, name FROM people JOIN company ON fk_comp = id_company');
   return $data_people;
 }
 
