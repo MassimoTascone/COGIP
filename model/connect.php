@@ -1,4 +1,7 @@
 <?php 
+// require la page Manager.php qui stocke la request SQL et connecte avec la BDD
+require('model/Manager.php');
+
 
 //Création des fonctions qui font des request sur la BDD
 function getCompany()
@@ -26,17 +29,4 @@ function getInvoice()
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
   $data_invoice = $conn->query('SELECT * FROM invoice');
   return $data_invoice;
-}
-
-
-// connect à la base de donées (model)
-function dbConnect()
-{
-        try {
-            $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
-            return $conn;
-            }
-        catch(Execption $e) {
-              die('erreur :' . $e->getMessage());    
-        }
 }
