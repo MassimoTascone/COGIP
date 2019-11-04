@@ -3,14 +3,22 @@
     
 
 $company = getCompany();
-$people = getPeople();
+$people= getPeople();
+$invoice = getInvoice();
+
 
 function createTable($fetchFrom){
   while ($data = $fetchFrom->fetch()) {
-    foreach($data as $value)
-      {
-      echo $value;
-      //echo  $value['id_company'] . $value['name'] . $value['TVA'] . $value['country'];
+      
+      echo '<tr>';
+      echo '<a href="#">';
+      foreach($data as $key => $value){
+        
+        echo "<td> $value </td>";
+      }
+      echo "<td><a href='#'>More Info</a></td>";
+
+      echo '</a>';
+      echo '<tr>';
       }
   }
-}

@@ -1,24 +1,33 @@
 <?php
 
 
-function getCompany()
-{
+function getCompany() {
   $conn = dbConnect();
-  $data_company = $conn->query('SELECT name,TVA FROM company ORDER BY name LIMIT 2');
+  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  $data_company = $conn->query('SELECT name,TVA FROM company ORDER BY name');
   return $data_company;
 }
 
-function getPeople()
-{
+function getPeople() { 
   $conn = dbConnect();
-  $data_people = $conn->query('SELECT * FROM people LIMIT 2');
+  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  $data_people = $conn->query('SELECT * FROM people');
   return $data_people;
 }
+
+function getInvoice() {
+    $conn = dbConnect();
+    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $data_invoice = $conn ->query('SELECT * FROM invoice');
+    return $data_invoice;
+
+}
+
 
 function dbConnect()
 {
         try {
-            $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
+            $conn = new PDO('mysql:host=database;dbname=cogip', 'root', 'root');
             return $conn;
             }
         catch(Execption $e) {
