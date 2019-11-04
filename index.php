@@ -14,16 +14,19 @@
   <nav class="navbar navbar-expand-sm bg-light">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Acceuil</a>
+        <a class="nav-link" href="?home">Acceuil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Factures</a>
+        <a class="nav-link" href="?invoice">Factures</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sociétés</a>
+        <a class="nav-link" href="?company">Sociétés</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Connexion</a>
+        <a class="nav-link" href="?contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?login">Connexion</a>
       </li>
     </ul>
 
@@ -31,14 +34,27 @@
 
   <main>
     <?php
-  // view
-    require('model/connect.php');
     
-    require('controller/controller.php');
+   
+    if(isset($_GET['invoice'])){
+    require('vue/invoiceView.php');
+    }
     
-    createTable($company);
-    createTable($people);
+      if(isset($_GET['home'])){
+    echo 'ceci est le home';
+    }
+    
+         if(isset($_GET['company'])){
+    echo 'ceci est la page company';
+    }
+    
+    
+    
+    
+    
     ?>
+
+
 
   </main>
 
