@@ -1,5 +1,27 @@
+<?php
+session_start();
+$title="";
+  if(isset($_GET['invoice'])){
+    $title="COGIP | Invoice";
+    }    
+
+  if(isset($_GET['contact'])){
+    $title="COGIP | Contact";
+    } 
+
+  if(isset($_GET['company'])){
+    $title="COGIP | Company";
+    }
+    
+  if(isset($_GET['login'])){
+    $title="COGIP | Login";
+    }
+  if(isset($_GET['login'])){
+    $title="COGIP | Login";
+    }
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +30,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="vue/assets/css/style.css">
-    <title>Document</title>
+    <title><?php echo $title; ?></title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-light">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="?home">Acceuil</a>
+        <a class="nav-link" href="?home">Accueil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?invoice">Factures</a>
@@ -30,23 +52,28 @@
         <a class="nav-link" href="?login">Connexion</a>
       </li>
     </ul>
-
   </nav>
 
   <main>
     <?php
-    
    
     if(isset($_GET['invoice'])){
     require('controller/invoiceController.php');
+    $title="COGIP | Invoice";
     }    
 
     if(isset($_GET['contact'])){
       require('controller/peopleController.php');
+      $title="COGIP | Contact";
       } 
 
     if(isset($_GET['company'])){
       require('controller/companyController.php');
+      $title="COGIP | Company";
+    }
+
+    if(isset($_GET['login'])){
+      require('controller/loginController.php');
     }
 
       ?>
