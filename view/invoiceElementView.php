@@ -1,0 +1,1 @@
+<h1>Facture numéro : <?php createTable($invoiceNumber); ?></h1>

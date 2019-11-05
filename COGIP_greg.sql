@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  jeu. 31 oct. 2019 à 09:48
--- Version du serveur :  10.4.6-MariaDB
--- Version de PHP :  7.3.9
+-- Host: database:3306
+-- Generation Time: Nov 05, 2019 at 10:21 AM
+-- Server version: 10.4.2-MariaDB-1:10.4.2+maria~bionic
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `COGIP`
+-- Database: `cogip`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company`
+-- Table structure for table `company`
 --
 
 CREATE TABLE `company` (
@@ -37,7 +37,7 @@ CREATE TABLE `company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `company`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id_company`, `name`, `TVA`, `country`, `fk_type`) VALUES
@@ -54,7 +54,7 @@ INSERT INTO `company` (`id_company`, `name`, `TVA`, `country`, `fk_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `invoice`
+-- Table structure for table `invoice`
 --
 
 CREATE TABLE `invoice` (
@@ -66,7 +66,7 @@ CREATE TABLE `invoice` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `invoice`
+-- Dumping data for table `invoice`
 --
 
 INSERT INTO `invoice` (`id_invoice`, `number`, `date`, `fk_company`, `fk_people`) VALUES
@@ -79,51 +79,32 @@ INSERT INTO `invoice` (`id_invoice`, `number`, `date`, `fk_company`, `fk_people`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `people`
+-- Table structure for table `people`
 --
 
 CREATE TABLE `people` (
   `id_people` int(11) NOT NULL,
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `fk_comp` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `people`
+-- Dumping data for table `people`
 --
 
-INSERT INTO `people` (`id_people`, `first_name`, `last_name`, `email`) VALUES
-(1, 'Peter', 'Gregory', 'peter.gregory@raviga.com'),
-(2, 'Cameron', 'Howe', 'cam.howe@mutiny.net'),
-(3, 'Gavin', 'Belson', 'gavin@hooli.com'),
-(4, 'Jian', 'Yang', 'jian.yang@phoque.off'),
-(5, 'Bertram', 'Gilfoyle', 'gilfoyle@piedpiper.com');
+INSERT INTO `people` (`id_people`, `first_name`, `last_name`, `email`, `fk_comp`) VALUES
+(1, 'Peter', 'Gregory', 'peter.gregory@raviga.com', 1),
+(2, 'Cameron', 'Howe', 'cam.howe@mutiny.net', 9),
+(3, 'Gavin', 'Belson', 'gavin@hooli.com', 7),
+(4, 'Jian', 'Yang', 'jian.yang@phoque.off', 2),
+(5, 'Bertram', 'Gilfoyle', 'gilfoyle@piedpiper.com', 4);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `people_has_company`
---
-
-CREATE TABLE `people_has_company` (
-  `id_fk_people` int(11) NOT NULL,
-  `id_fk_company` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `people_has_company`
---
-
-INSERT INTO `people_has_company` (`id_fk_people`, `id_fk_company`) VALUES
-(1, 1),
-(1, 1),
-(1, 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `type_company`
+-- Table structure for table `type_company`
 --
 
 CREATE TABLE `type_company` (
@@ -132,7 +113,7 @@ CREATE TABLE `type_company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `type_company`
+-- Dumping data for table `type_company`
 --
 
 INSERT INTO `type_company` (`id_type`, `type`) VALUES
@@ -142,7 +123,7 @@ INSERT INTO `type_company` (`id_type`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -152,18 +133,18 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `company`
+-- Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id_company`),
   ADD KEY `fk_type` (`fk_type`);
 
 --
--- Index pour la table `invoice`
+-- Indexes for table `invoice`
 --
 ALTER TABLE `invoice`
   ADD PRIMARY KEY (`id_invoice`),
@@ -171,87 +152,80 @@ ALTER TABLE `invoice`
   ADD KEY `fk_people` (`fk_people`);
 
 --
--- Index pour la table `people`
+-- Indexes for table `people`
 --
 ALTER TABLE `people`
-  ADD PRIMARY KEY (`id_people`);
+  ADD PRIMARY KEY (`id_people`),
+  ADD KEY `fk_comp` (`fk_comp`);
 
 --
--- Index pour la table `people_has_company`
---
-ALTER TABLE `people_has_company`
-  ADD KEY `id_people` (`id_fk_people`),
-  ADD KEY `id_company` (`id_fk_company`);
-
---
--- Index pour la table `type_company`
+-- Indexes for table `type_company`
 --
 ALTER TABLE `type_company`
   ADD PRIMARY KEY (`id_type`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `company`
+-- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
   MODIFY `id_company` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT pour la table `invoice`
+-- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `people`
+-- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
   MODIFY `id_people` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `type_company`
+-- AUTO_INCREMENT for table `type_company`
 --
 ALTER TABLE `type_company`
   MODIFY `id_type` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `company`
+-- Constraints for table `company`
 --
 ALTER TABLE `company`
   ADD CONSTRAINT `fk_type` FOREIGN KEY (`fk_type`) REFERENCES `type_company` (`id_type`);
 
 --
--- Contraintes pour la table `invoice`
+-- Constraints for table `invoice`
 --
 ALTER TABLE `invoice`
   ADD CONSTRAINT `fk_company` FOREIGN KEY (`fk_company`) REFERENCES `company` (`id_company`),
   ADD CONSTRAINT `fk_people` FOREIGN KEY (`fk_people`) REFERENCES `people` (`id_people`);
 
 --
--- Contraintes pour la table `people_has_company`
+-- Constraints for table `people`
 --
-ALTER TABLE `people_has_company`
-  ADD CONSTRAINT `id_company` FOREIGN KEY (`id_fk_company`) REFERENCES `company` (`id_company`),
-  ADD CONSTRAINT `id_people` FOREIGN KEY (`id_fk_people`) REFERENCES `people` (`id_people`);
+ALTER TABLE `people`
+  ADD CONSTRAINT `fk_comp` FOREIGN KEY (`fk_comp`) REFERENCES `company` (`id_company`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
