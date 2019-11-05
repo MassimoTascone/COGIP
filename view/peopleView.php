@@ -5,5 +5,6 @@
     <th>Nom</th>
     <th>E-mail</th>
     <th>Société</th>
+    <th>Info</th>
     <?php createTable($people); ?>
 </table>

@@ -17,4 +17,4 @@
 //}
 
 require('model/invoiceModel.php');
-require('vue/invoiceView.php');
+require('view/invoiceView.php');

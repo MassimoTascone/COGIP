@@ -1,3 +1,3 @@
 <?php
 require('model/companyModel.php');
-require('vue/companyView.php');
+require('view/companyView.php');

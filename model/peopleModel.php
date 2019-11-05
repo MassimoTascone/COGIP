@@ -1,5 +1,5 @@
 <?php
-require('model/connect.php');
+require('model/Manager.php');
 // Fonctiion with Query to get data from People table
 function getPeople() {
   $conn = dbConnect();
@@ -12,7 +12,6 @@ $people = getPeople();
   
 function createTable($fetchFrom){
   while ($data = $fetchFrom->fetch()) {
-      
       echo '<tr>';
       echo '<a href="#">';
       foreach($data as $key => $value){
