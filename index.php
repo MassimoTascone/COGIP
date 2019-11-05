@@ -12,4 +12,8 @@
       require('controller/companyController.php');
     }
 
+    if(isset($_GET['login'])){
+      require('controller/companyElementController.php');
+    }
+
 require('view/footer.php');
