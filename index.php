@@ -35,11 +35,10 @@
 
   <main>
     <?php
-    
-   
+  
     if(isset($_GET['invoice'])){
     require('controller/invoiceController.php');
-    }
+    }    
 
     if(isset($_GET['contact'])){
       require('controller/peopleController.php');

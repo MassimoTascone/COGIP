@@ -12,7 +12,6 @@ $people = getPeople();
   
 function createTable($fetchFrom){
   while ($data = $fetchFrom->fetch()) {
-      
       echo '<tr>';
       echo '<a href="#">';
       foreach($data as $key => $value){
