@@ -5,7 +5,7 @@
 ## Created by:
 
 [Massimo Tascone](https://github.com/MassimoTascone/)<br/>
-[Arthuro Solis](https://github.com/artedsolis)<br/>
+[Arturo Solis](https://github.com/artedsolis)<br/>
 [Grégoire Wastelain](https://github.com/gwastelain)<br/>
 
 ### Missions objectives:
