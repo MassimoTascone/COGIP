@@ -39,8 +39,8 @@
   // view
 
   if(isset($_GET['people'])){
-    require('vue/contactView.php');
-    }
+    require('controller/peopleController.php');
+    } 
     ?>
 
     </main>
