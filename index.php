@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-sm bg-light">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="?home">Acceuil</a>
+        <a class="nav-link" href="?home">Accueil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?invoice">Factures</a>
@@ -40,22 +40,11 @@
     if(isset($_GET['invoice'])){
     require('controller/invoiceController.php');
     }
-    
-      if(isset($_GET['home'])){
-    echo 'ceci est le home';
-    }
-    
-         if(isset($_GET['company'])){
-    echo 'ceci est la page company';
-    }
 
-    if(isset($_GET['people'])){
+    if(isset($_GET['contact'])){
       require('controller/peopleController.php');
       } 
 
-      if(isset($_GET['home'])){
-        echo 'ceci est la page d\'accueil';
-    }
     if(isset($_GET['company'])){
       require('controller/companyController.php');
     }

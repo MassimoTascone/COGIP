@@ -1,5 +1,5 @@
 <?php
-require('model/connect.php');
+require('model/Manager.php');
 // Fonctiion with Query to get data from People table
 function getPeople() {
   $conn = dbConnect();
