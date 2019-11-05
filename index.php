@@ -36,7 +36,7 @@
           echo 'ceci est la page d\'accueil';
       }
       if(isset($_GET['company'])){
-        require('vue/companyView.php');
+        require('controller/companyController.php');
       }
 
         ?>

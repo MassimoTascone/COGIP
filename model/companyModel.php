@@ -1,13 +1,7 @@
 <?php
 
 // connect à la base de donées (model)
-
-
-
-
-
-// request résultats de la BDD (model)
-//$data_people = $conn->query ('SELECT * FROM people')->fetchAll();
+require('model/Manager.php');
 
 function getCompanyFournisseur()
 {
@@ -17,7 +11,6 @@ function getCompanyFournisseur()
   return $data_company;
 }
 
-
 function getCompanyClient()
 {
   $conn = dbConnect();
@@ -26,15 +19,16 @@ function getCompanyClient()
   return $data_company;
 }
 
+$companyFournisseur = getCompanyFournisseur();
+$companyClient = getCompanyClient();
 
-
-function dbConnect()
-{
-        try {
-            $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
-            return $conn;
-            }
-        catch(Execption $e) {
-              die('erreur :' . $e->getMessage());    
-        }
+function createTable($fetchFrom){
+  while ($data = $fetchFrom->fetch()) {
+    echo "<tr>";
+    foreach($data as $value)
+      {
+      echo "<td> $value </td>";
+      }
+    echo "</tr>";
+  }
 }
