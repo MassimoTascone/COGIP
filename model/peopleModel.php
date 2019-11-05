@@ -9,7 +9,7 @@ function getPeople() {
 }
 
 $people = getPeople();
-
+  
 function createTable($fetchFrom){
   while ($data = $fetchFrom->fetch()) {
       

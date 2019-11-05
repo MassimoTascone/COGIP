@@ -2,9 +2,9 @@
    // controller
     
 
-$company = getCompany();
+// $company = getCompany();
 $people= getPeople();
-$invoice = getInvoice();
+// $invoice = getInvoice();
 
 
 function createTable($fetchFrom){
