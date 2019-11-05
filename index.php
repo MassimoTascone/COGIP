@@ -37,7 +37,7 @@
     
    
     if(isset($_GET['invoice'])){
-    require('vue/invoiceView.php');
+    require('controller/invoiceController.php');
     }
     
       if(isset($_GET['home'])){
@@ -47,11 +47,7 @@
          if(isset($_GET['company'])){
     echo 'ceci est la page company';
     }
-    
-    
-    
-    
-    
+     
     ?>
 
 
