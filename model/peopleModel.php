@@ -23,4 +23,3 @@ function createTable($fetchFrom){
       echo '<tr>';
       }
   }
-

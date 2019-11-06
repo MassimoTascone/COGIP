@@ -1,25 +1,5 @@
 <?php 
 require('controller/headerController.php');
-$title="";
-  if(isset($_GET['home'])){
-    $title="Accueil | COGIP";
-    } 
-  if(isset($_GET['invoice'])){
-    $title="Factures | COGIP";
-    }    
-
-  if(isset($_GET['contact'])){
-    $title="Contacts | COGIP";
-    } 
-
-  if(isset($_GET['company'])){
-    $title="Sociétés | COGIP";
-    }
-    
-  if(isset($_GET['login'])){
-    $title="Connexion | COGIP";
-    }
-
 
     if(isset($_GET['home'])){
       require('controller/accueilController.php');
@@ -30,7 +10,8 @@ $title="";
     }    
 
     if(isset($_GET['contact'])){
-      require('controller/peopleController.php');
+      // require('controller/peopleController.php');
+      require('controller/peopleElementController.php'); // juste pour test si la page fonctionne
       } 
 
     if(isset($_GET['company'])){

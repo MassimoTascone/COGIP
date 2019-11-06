@@ -2,8 +2,10 @@
 <table class='table'>
     <th>Prénom</th>
     <th>Nom</th>
-    <th>E-mail</th>
     <th>Société</th>
+    <th>E-mail</th>
+    <th>N°Facture</th>
+    <th>Date</th>
     <th>Info</th>
-    <?php createTable($peopleData); ?>
+    <?php createTable($peopleDetail); ?>
 </table>
