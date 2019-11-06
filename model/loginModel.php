@@ -1,5 +1,5 @@
 <?php
-require('model/Manager.php');
+require_once('model/Manager.php');
 // Taking into variables user's input
 
 if (isset($_POST['username'])) {

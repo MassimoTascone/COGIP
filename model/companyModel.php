@@ -1,7 +1,7 @@
 <?php
 
 // connect à la base de donées (model)
-require('model/Manager.php');
+require_once('model/Manager.php');
 
 function getCompanyFournisseur()
 {

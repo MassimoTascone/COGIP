@@ -1,5 +1,5 @@
 <?php
-require('model/Manager.php');
+require_once('model/Manager.php');
 
 function getCompanyName()
 {

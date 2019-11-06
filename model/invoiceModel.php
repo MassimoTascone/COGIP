@@ -1,6 +1,6 @@
 <?php 
 // require la page Manager.php qui stocke la request SQL et connecte avec la BDD
-require('model/Manager.php');
+require_once('model/Manager.php');
 
 //Création des fonctions qui font des request sur la BDD
 

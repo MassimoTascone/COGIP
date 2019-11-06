@@ -1,30 +1,30 @@
 <?php
 
-var_dump($_POST);
+// var_dump($_POST);
 
-if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email'])){
+// if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email'])){
 
-  try {
-            $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
-    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            return $conn;
-            }
-        catch(Exception $e) {
-              die('erreur :' . $e->getMessage());    
-        }
+//   try {
+//             $conn = new PDO('mysql:host=localhost;dbname=cogip', 'root', '');
+//     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+//             return $conn;
+//             }
+//         catch(Exception $e) {
+//               die('erreur :' . $e->getMessage());    
+//         }
     
-$firstname = $_POST['first_name'];
-$lastname = $_POST['last_name'];
-$email = $_POST['email'];
+// $firstname = $_POST['first_name'];
+// $lastname = $_POST['last_name'];
+// $email = $_POST['email'];
   
-    echo 'données bien enregistrés';
+//     echo 'données bien enregistrés';
 
-  $req=$conn->prepare('INSERT INTO people(first_name, last_name, email) VALUES(:first_name, :last_name, :email)');
-  $req-execute(array(
-  'first_name' => $firstname,
-  'last_name' => $lastname,
-  'email' => $email));
-  }
+//   $req=$conn->prepare('INSERT INTO people(first_name, last_name, email) VALUES(:first_name, :last_name, :email)');
+//   $req-execute(array(
+//   'first_name' => $firstname,
+//   'last_name' => $lastname,
+//   'email' => $email));
+//   }
 
 ?>
 

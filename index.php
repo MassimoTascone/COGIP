@@ -42,8 +42,4 @@ $title="";
       require('controller/loginController.php');
     }
 
-    if(isset($_GET['login'])){
-      require('');
-    }
-
-require('view/footer.php');
+require('view/footerView.php');

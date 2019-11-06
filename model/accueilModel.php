@@ -1,6 +1,6 @@
 <?php
 // require Manager connection
-require('model/Manager.php');
+require_once('model/Manager.php');
 
 function getInvoiceAccueil()
 {
@@ -56,8 +56,4 @@ function createTable($fetchFrom){
       echo "<td><a href=?more>more info</a></td>" ;
       echo "</tr>";
     }
-  }
-
-  if(isset($_GET['more'])){
-    require('controller/invoiceController.php');
   }
