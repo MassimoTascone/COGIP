@@ -42,4 +42,8 @@ $title="";
       require('controller/loginController.php');
     }
 
+    if(isset($_GET['detail'])){
+      require('controller/invoiceElementController.php');
+    }
+
 require('view/footerView.php');
