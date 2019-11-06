@@ -22,7 +22,10 @@ $title="";
     }
 
 
-   
+    if(isset($_GET['home'])){
+      require('controller/accueilController.php');
+    }
+  
     if(isset($_GET['invoice'])){
     require('controller/invoiceController.php');
     }    

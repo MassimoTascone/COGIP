@@ -26,7 +26,7 @@ function getPeople()
 function dbConnect()
 {
         try {
-            $conn = new PDO('mysql:host=ldatabase;dbname=cogip', 'root', 'root');
+            $conn = new PDO('mysql:host=ldatabase;dbname=cogip', 'root', '');
             return $conn;
             }
         catch(Execption $e) {
