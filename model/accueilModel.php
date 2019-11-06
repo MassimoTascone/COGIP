@@ -57,7 +57,3 @@ function createTable($fetchFrom){
       echo "</tr>";
     }
   }
-
-  if(isset($_GET['more'])){
-    require('controller/invoiceController.php');
-  }
