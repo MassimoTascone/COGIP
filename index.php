@@ -1,6 +1,5 @@
 <?php 
 require('controller/headerController.php');
-session_start();
 $title="";
   if(isset($_GET['home'])){
     $title="Accueil | COGIP";
