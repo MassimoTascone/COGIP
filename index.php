@@ -46,4 +46,8 @@ $title="";
       require('controller/invoiceElementController.php');
     }
 
+    if(isset($_GET['invoiceDetail&Id=$id'])){
+      require('controller/invoiceElementController.php');
+    }
+
 require('view/footerView.php');

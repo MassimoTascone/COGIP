@@ -28,8 +28,10 @@ function createTable($fetchFrom){
       echo "<td> $value </td>";
       
       }
-    echo "<td><a href=" . $data['id_invoice'] .">more info</a></td>" ;
-    var_dump ($data);
+    //echo "<td><a href=" . $data['id_invoice'] .">more info</a></td>" ;
+      echo "<td><a href=?invoiceDetail&Id=$id>Plus d'info</a></td>";
+
+    //var_dump ($data);
        echo "</tr>";
   }
 }
