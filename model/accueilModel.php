@@ -1,6 +1,6 @@
 <?php
 // require Manager connection
-require('model/Manager.php');
+require_once('model/Manager.php');
 
 function getInvoiceAccueil()
 {

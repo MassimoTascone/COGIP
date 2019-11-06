@@ -42,4 +42,4 @@ $title="";
       require('controller/loginController.php');
     }
 
-require('view/footer.php');
+require('view/footerView.php');
