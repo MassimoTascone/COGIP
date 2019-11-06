@@ -9,7 +9,7 @@ function getCompanyName()
   return $data_company;
 }
 
-function getTva()
+function getCompanyTva()
 {
   $conn = dbConnect();
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -17,9 +17,26 @@ function getTva()
   return $data_company;
 }
 
+function getCompanyContacts()
+{
+  $conn = dbConnect();
+  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  $data_company = $conn->query('SELECT first_name, last_name, email FROM people JOIN company ON id_company = fk_comp');
+  return $data_company;
+}
+
+function getCompanyInvoices()
+{
+  $conn = dbConnect();
+  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  $data_company = $conn->query('SELECT number, date, first_name, last_name FROM invoice JOIN people ON id_people = fk_people');
+  return $data_company;
+}
 
 $companyName = getCompanyName();
-$companyTVA = getTVA();
+$companyTVA = getCompanyTVA();
+$companyContacts = getCompanyContacts();
+$companyInvoices = getCompanyInvoices();
 
 
 function createTable($fetchFrom){

@@ -13,7 +13,7 @@
     }
 
     if(isset($_GET['login'])){
-      require('controller/companyElementController.php');
+      require('');
     }
 
 require('view/footer.php');
