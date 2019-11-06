@@ -1,6 +1,7 @@
 <?php
 require('model/Manager.php');
 // Taking into variables user's input
+
 if (isset($_POST['username'])) {
 
     $username = $_POST['username'];
@@ -17,16 +18,16 @@ if (isset($_POST['username'])) {
         $query->execute(array($username,$password));
         $row = $query->fetch(PDO::FETCH_BOTH);
     }
-    var_dump($row);
+    // var_dump($row);
     if ($row == false) {
         $logError = "Mauvais nom d'utilisateur/mot de passe";
     }
     else {
         if ($_POST['password'] == $row['password']){
-            echo "Connecté mec";
             $_SESSION['id']=$row['id'];
             $_SESSION['username']=$row['username'];
             $_SESSION['password']=$row['password'];
+            header('location:controller/companyController.php');         
         }
         
 		

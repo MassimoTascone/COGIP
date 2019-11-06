@@ -1,24 +1,25 @@
 <?php
 session_start();
 $title="";
+  if(isset($_GET['home'])){
+    $title="Accueil | COGIP";
+    } 
   if(isset($_GET['invoice'])){
-    $title="COGIP | Invoice";
+    $title="Factures | COGIP";
     }    
 
   if(isset($_GET['contact'])){
-    $title="COGIP | Contact";
+    $title="Contacts | COGIP";
     } 
 
   if(isset($_GET['company'])){
-    $title="COGIP | Company";
+    $title="Sociétés | COGIP";
     }
     
   if(isset($_GET['login'])){
-    $title="COGIP | Login";
+    $title="Connexion | COGIP";
     }
-  if(isset($_GET['login'])){
-    $title="COGIP | Login";
-    }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
