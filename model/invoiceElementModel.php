@@ -12,7 +12,7 @@ $data_company_invoice = $conn->query(
   JOIN invoice ON fk_company = id_company 
   JOIN type_company ON fk_type = id_type
   JOIN people ON fk_people = id_people
-  WHERE id_type = 1');
+  WHERE id_type ='.$id);
 return $data_company_invoice;
 }
 

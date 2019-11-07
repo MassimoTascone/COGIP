@@ -46,7 +46,12 @@ $title="";
       require('controller/invoiceElementController.php');
     }
 
-    if(isset($_GET['invoiceDetail&Id=$id'])){
+    $id = ''; 
+    if( isset( $_GET['id'])) {
+        $id = $_GET['id']; 
+    } 
+
+    if(isset($_GET['invoiceDetail&id='.$id])){
       require('controller/invoiceElementController.php');
     }
 
