@@ -50,6 +50,9 @@ if(isset($_GET['login'])){
             <li class="nav-item">
                 <a class="nav-link" href="?login">Connexion</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?detail">detailTest</a>
+            </li>
         </ul>
 
     </nav>
