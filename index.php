@@ -1,6 +1,11 @@
 <?php 
 require('controller/headerController.php');
 
+if(isset($_GET['peopleRegister'])){
+  require('controller/peopleRegisterController.php');
+}
+
+
     if(isset($_GET['home'])){
       require('controller/accueilController.php');
     }
