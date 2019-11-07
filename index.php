@@ -22,8 +22,9 @@ require('controller/headerController.php');
       require('controller/loginController.php');
     }
 
-    if(isset($_GET['contactDetail'])){
+    if(isset($_GET['invoiceDetail'])){
       require('controller/invoiceElementController.php');
+    }
 
     if(isset($_GET['contactDetail'])){
       require('controller/peopleElementController.php');

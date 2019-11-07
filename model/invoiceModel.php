@@ -20,7 +20,6 @@ function getInvoice()
 
 $invoice = getInvoice();
 
-$id = ''; 
 if( isset( $_GET['id'])) {
     $id = $_GET['id']; 
 } 
@@ -34,15 +33,7 @@ function createTable($fetchFrom){
       echo "<td> $value </td>";
       
       }
-<<<<<<< HEAD
-    echo "<td><a href=?invoiceDetail&id=".$data['id_invoice'].">more info</a></td>" ;
-     // echo "<td><a href=?invoiceDetail&id=".$id.">Plus d'info</a></td>";
-
-    //var_dump ($data);
-       echo "</tr>";
-=======
-    echo "<td><a href=#>Détails</a></td>" ;
-    echo "</tr>";
->>>>>>> adacba2c2b64d8f14b16f6db2f42ef0e3a0927d1
+      echo '<td><a href="?contactDetail&id='.$data['id_invoice'].'">Détails</a></td>';
+      echo "</tr>";
   }
 }
