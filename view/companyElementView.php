@@ -1,16 +1,17 @@
-<h1> Société : <?php createTable($companyName); ?> </h1>
-<p> N° TVA : <?php createTable($companyTVA); ?> </p>
-<p> Type : </p>
-<h2> Personnes de contact </h2>
 <table class='table'>
+
+
     <thead>
+        <th>Société</th>
+        <th>N° TVA</th>
+        <th>Type</th>
         <th>Prénom</th>
         <th>Nom</th>
         <th>Email</th>
     </thead>
-    <?php createTable($companyContacts); ?>
+    <?php createTable($companyPeopleDetails); ?>
 </table>
-<h2> Factures </h2>
+<p> Factures </p>
 <table class='table'>
     <thead>
         <th>N° facture</th>
@@ -18,5 +19,7 @@
         <th>Prénom contact</th>
         <th>Nom contact</th>
     </thead>
-    <?php createTable($companyInvoices); ?>
+
+    <?php createTable($companyInvoiceDetails); ?>
+
 </table>

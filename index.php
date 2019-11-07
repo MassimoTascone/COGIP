@@ -38,8 +38,12 @@ $title="";
       require('controller/companyController.php');
     }
 
+ //   if(isset($_GET['login'])){
+//      require('controller/loginController.php');
+ //   }
+
     if(isset($_GET['login'])){
-      require('controller/loginController.php');
+      require('controller/companyElementController.php');
     }
 
 require('view/footerView.php');
