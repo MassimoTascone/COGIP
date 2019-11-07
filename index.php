@@ -10,8 +10,8 @@ require('controller/headerController.php');
     }    
 
     if(isset($_GET['contact'])){
-      // require('controller/peopleController.php');
-      require('controller/peopleElementController.php'); // juste pour test si la page fonctionne
+      require('controller/peopleController.php');
+      // require('controller/peopleElementController.php'); // juste pour test si la page fonctionne
       } 
 
     if(isset($_GET['company'])){
@@ -20,6 +20,12 @@ require('controller/headerController.php');
 
     if(isset($_GET['login'])){
       require('controller/loginController.php');
+    }
+
+
+    
+    if(isset($_GET['contactDetail&Id='.$id])){
+      require('controller/peopleElement.php');
     }
 
 require('view/footerView.php');
