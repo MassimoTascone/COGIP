@@ -39,7 +39,7 @@ $title="";
     }
 
     if(isset($_GET['login'])){
-      require('controller/companyElementController.php');
+      require('controller/loginController.php');
     }
 
 

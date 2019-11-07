@@ -1,8 +1,8 @@
 <table class='table'>
 
-    <h1>Société : <?php echo $name['name'];?></h1>
-    <p>N° de TVA : <?php echo $name['TVA'];?></p>
-    <p>Type : <?php echo $name['type'];?></p>
+    <h1>Société : <?php echo $peopleDetails['name'];?></h1>
+    <p>N° de TVA : <?php echo $peopleDetails['TVA'];?></p>
+    <p>Type : <?php echo $peopleDetails['type'];?></p>
     <p>Personne de contact<p>
             <thead>
                 <tr>
@@ -11,9 +11,9 @@
                     <th> Email </th>
                 </tr>
                 <tr>
-                    <td><?php echo $name['first_name'];?></td>
-                    <td><?php echo $name['last_name'];?></td>
-                    <td><?php echo $name['email'];?></td>
+                    <td><?php echo $peopleDetails['first_name'];?></td>
+                    <td><?php echo $peopleDetails['last_name'];?></td>
+                    <td><?php echo $peopleDetails['email'];?></td>
                 </tr>
             </thead>
 </table>

@@ -29,6 +29,8 @@ function getCompanyInvoiceDetails()
 $companyPeopleDetails = getCompanyPeopleDetails();
 $companyInvoiceDetails = getCompanyInvoiceDetails();
 
+$peopleDetails = getData($companyPeopleDetails); 
+
 
 function createTable($fetchFrom){
     while ($data = $fetchFrom->fetch()) {
@@ -44,15 +46,5 @@ function createTable($fetchFrom){
   function getData($fetchFrom){
   return $fetchFrom->fetch();
   }
-
-  $name = getData($companyPeopleDetails); 
-  $TVA = getData($companyPeopleDetails); 
-  $type = getData($companyPeopleDetails); 
-
-  $first_name = getData($companyPeopleDetails); 
-  $last_name = getData($companyPeopleDetails); 
-  $email = getData($companyPeopleDetails);
-
-
 
 ?>
