@@ -26,6 +26,9 @@ require('controller/headerController.php');
     
     if(isset($_GET['contactDetail'])){
       require('controller/invoiceElementController.php');
+
+    if(isset($_GET['contactDetail'])){
+      require('controller/peopleElementController.php');
     }
 
 require('view/footerView.php');
