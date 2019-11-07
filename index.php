@@ -23,9 +23,9 @@ require('controller/headerController.php');
     }
 
 
-    
-    if(isset($_GET['contactDetail&Id='.$id])){
-      require('controller/peopleElement.php');
+
+    if(isset($_GET['contactDetail'])){
+      require('controller/peopleElementController.php');
     }
 
 require('view/footerView.php');
