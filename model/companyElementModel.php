@@ -19,7 +19,7 @@ function getCompanyInvoiceDetails()
   $conn = dbConnect();
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $data_company = $conn->query(
-    'SELECT number, date, name first_name, last_name FROM company 
+    'SELECT number, date, first_name, last_name FROM company 
     JOIN people ON id_company = fk_comp
     JOIN invoice ON id_company = fk_company
     LIMIT 1');
