@@ -9,18 +9,38 @@ function getPeople() {
 }
 
 $people = getPeople();
+
+
+if(isset($_GET['id'])){
+  $id = $_GET['id'];
+}
   
 function createTable($fetchFrom){
   while ($data = $fetchFrom->fetch()) {
-      echo '<tr>';
-      echo '<a href="#">';
-      foreach($data as $key => $value){
-        echo "<td> $value </td>";
+    echo "<tr>";
+    foreach($data as $key => $value)
+      {
+      echo "<td> $value </td>";
+      
       }
-      echo "<td><a href='#'>More Info</a></td>";
-
-      echo '</a>';
-      echo '<tr>';
-      }
+    echo '<td><a href="?contactDetail&id='.$data['id_people'].'">Détails</a></td>';
+    echo "</tr>";
   }
+}
 
+
+
+
+    
+  //     echo '<tr>';
+  //    foreach($data as $key => $value){
+  //       echo "<td> $value </td>";
+        
+
+  //     }
+  //     echo '<td><a href="?contactDetail&Id='.$id.'>Plus d\'Info</a></td>'; 
+    
+  //     echo '</a>';
+  //     echo '<tr>';
+  //     }
+  // }
