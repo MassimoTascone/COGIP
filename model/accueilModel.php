@@ -33,7 +33,7 @@ function getCompanyAccueil()
     $conn = dbConnect();
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
     $data_company_accueil = $conn->query(
-        'SELECT id_company, name, TVA, country, id_type
+        'SELECT id_company, name, TVA, country, type
         FROM company
         JOIN type_company ON id_type
         ORDER BY id_company DESC
