@@ -17,4 +17,5 @@
 //}
 
 require('model/invoiceModel.php');
+require('controller/headerController.php');
 require('view/invoiceView.php');

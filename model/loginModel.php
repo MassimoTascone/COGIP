@@ -27,8 +27,7 @@ if (isset($_POST['username'])) {
             $_SESSION['id']=$row['id'];
             $_SESSION['username']=$row['username'];
             $_SESSION['password']=$row['password'];
-            // header('location:controller/companyController.php');
-            echo "Vous êtes connecté";         
+            header('Location: index.php');
         }
         
 		

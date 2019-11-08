@@ -1,7 +1,12 @@
-<?php 
-require('controller/headerController.php');
+<?php
+session_start();
+  if(isset($_GET['deco'])){
+    session_destroy();
+    unset($_SESSION);
+    require('controller/accueilController.php');
+  } 
 
-    if(isset($_GET['home'])){
+    if(isset($_GET['home']) and ($_SESSION == NULL)){
       require('controller/accueilController.php');
     }
   
@@ -18,8 +23,8 @@ require('controller/headerController.php');
     }
 
     if(isset($_GET['login'])){
-      // require('controller/loginController.php');
-      require('controller/homeAdminController.php');
+      require('controller/loginController.php');
+      // require('controller/homeAdminController.php');
 
     }
 
@@ -27,8 +32,18 @@ require('controller/headerController.php');
       require('controller/peopleElementController.php');
     }
     
-    if(isset($_GET['contactDetail'])){
-      require('controller/invoiceElementController.php');
+    if($_SESSION['username']=='massimo'){
+      require('controller/homeAdminController.php');
+
     }
+
+    
+  
+
+    var_dump($_SESSION);
+
+    
+
+
 
 require('view/footerView.php');

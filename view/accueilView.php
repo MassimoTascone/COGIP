@@ -6,7 +6,7 @@
         <div class="col-10">
 
             <p>5 dernières Factures</p>
-            <table class="table">
+            <table class="table border">
                 <th>Id</th>
                 <th>Numéro</th>
                 <th>Date</th>
@@ -15,7 +15,7 @@
             </table>
 
             <p>5 dernières Contatcs</p>
-            <table class="table">
+            <table class="table border">
                 <th>Id</th>
                 <th>Prénom</th>
                 <th>Nom</th>
@@ -25,7 +25,7 @@
             </table>
 
             <p>5 dernières Sociétés</p>
-            <table class="table">
+            <table class="table border">
                 <th>Id</th>
                 <th>Société</th>
                 <th>TVA</th>
