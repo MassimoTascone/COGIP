@@ -40,7 +40,6 @@ session_start();
       require('controller/homeAdminController.php');
 
     }
-    require('controller/accueilController.php');
 
 
     
