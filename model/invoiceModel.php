@@ -13,11 +13,16 @@ function getInvoice()
     'SELECT id_invoice, number, date, name, country, type
      FROM invoice 
      JOIN company ON fk_company = id_company
-     JOIN type_company');
+     JOIN type_company
+     WHERE id_invoice');
   return $data_invoice;
 }
 
 $invoice = getInvoice();
+
+if( isset( $_GET['id'])) {
+    $id = $_GET['id']; 
+} 
 
 // Une fonction qui crée un Loop et met en forme les données qu'on lui demande
 function createTable($fetchFrom){
@@ -28,7 +33,7 @@ function createTable($fetchFrom){
       echo "<td> $value </td>";
       
       }
-    echo "<td><a href=#>Détails</a></td>" ;
-    echo "</tr>";
+      echo '<td><a href="?contactDetail&id='.$data['id_invoice'].'">Détails</a></td>';
+      echo "</tr>";
   }
 }

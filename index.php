@@ -24,8 +24,10 @@ session_start();
 
     if(isset($_GET['login'])){
       require('controller/loginController.php');
-      // require('controller/homeAdminController.php');
+    }
 
+    if(isset($_GET['invoiceDetail'])){
+      require('controller/invoiceElementController.php');
     }
 
     if(isset($_GET['contactDetail'])){
@@ -46,4 +48,4 @@ session_start();
 
 
 
-require('view/footerView.php');
+require('controller/footerController.php');

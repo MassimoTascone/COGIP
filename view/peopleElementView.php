@@ -6,6 +6,5 @@
     <th>E-mail</th>
     <th>N°Facture</th>
     <th>Date</th>
-    <th>Info</th>
     <?php createTable($peopleDetail); ?>
 </table>
