@@ -34,18 +34,11 @@ session_start();
       require('controller/peopleElementController.php');
     }
     
-    if($_SESSION['username']=='massimo'){
-      require('controller/homeAdminController.php');
+  if($_SESSION['username']=='massimo'){
+    require('controller/homeAdminController.php');
 
-    }
-
-    
-  
+  }
 
     var_dump($_SESSION);
-
-    
-
-
 
 require('controller/footerController.php');
