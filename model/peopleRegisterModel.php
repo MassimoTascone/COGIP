@@ -38,8 +38,7 @@ function getCompanyFromPeople()
  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
  $data_select_company = $conn->query(
          'SELECT name
-         FROM company
-         ORDER BY id_company'
+         FROM company'
          );
         return $data_select_company;
 }
@@ -51,17 +50,22 @@ $companySelectNames = getData($displaylistCompany);
 
 function selectCompany($fetchFrom){
         while($data = $fetchFrom->fetch()){
-                //echo "<tr>";
-                foreach($data as $key => $value){
-                        echo '<option> '.$companySelectNames["name"]. '</option>';
+                echo "<tr>";
+                foreach($data as $value)
+                {
+                        echo "<td> $companySelectNames </td>";
+                        // echo '<option> '.$companySelectNames["id_company"]. '</option>';
                 }
-                //echo "</tr>";
+                echo "</tr>";
         }
 }
 
 function getData($fetchFrom){
         return $fetchFrom->fetch();
 }
+
+var_dump($companySelectNames['name']);
+
 
 
 // var_dump($key);

@@ -25,11 +25,12 @@
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
 
-
           <div class="form-group">
            <label for="exampleFormControlSelect1">Société</label>
              <select class="form-control" id="exampleFormControlSelect1">
-             <option><?php selectCompany(); ?> </option>    
+             <option value=""><?php echo $companySelectNames['name' ]?></option>
+             <option value=""><?php echo $companySelectNames['name']?></option>
+             <option value=""><?php echo $companySelectNames['name']?></option>         
           </select>
           </div>
 
