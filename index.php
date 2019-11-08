@@ -1,25 +1,9 @@
-<?php require('controller/headerController.php');
+<?php 
+require('controller/headerController.php');
 
-session_start();
-$title="";
-  if(isset($_GET['home'])){
-    $title="Accueil | COGIP";
-    } 
-  if(isset($_GET['invoice'])){
-    $title="Factures | COGIP";
-    }    
-
-  if(isset($_GET['contact'])){
-    $title="Contacts | COGIP";
-    } 
-
-  if(isset($_GET['company'])){
-    $title="Sociétés | COGIP";
-    }
-    
-  if(isset($_GET['login'])){
-    $title="Connexion | COGIP";
-    }
+if(isset($_GET['peopleRegister'])){
+  require('controller/peopleRegisterController.php');
+}
 
 
     if(isset($_GET['home'])){
@@ -32,6 +16,7 @@ $title="";
 
     if(isset($_GET['contact'])){
       require('controller/peopleController.php');
+      // require('controller/peopleElementController.php'); // juste pour test si la page fonctionne
       } 
 
     if(isset($_GET['company'])){
@@ -42,6 +27,12 @@ $title="";
       require('controller/loginController.php');
     }
 
+    if(isset($_GET['invoiceDetail'])){
+      require('controller/invoiceElementController.php');
+    }
 
+    if(isset($_GET['contactDetail'])){
+      require('controller/peopleElementController.php');
+    }
 
-require('view/footerView.php');
+require('controller/footerController.php');

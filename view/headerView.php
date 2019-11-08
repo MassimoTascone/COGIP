@@ -1,3 +1,24 @@
+<?php 
+$title="";
+if(isset($_GET['home'])){
+  $title="Accueil | COGIP";
+  } 
+if(isset($_GET['invoice'])){
+  $title="Factures | COGIP";
+  }    
+
+if(isset($_GET['contact'])){
+  $title="Contacts | COGIP";
+  } 
+
+if(isset($_GET['company'])){
+  $title="Sociétés | COGIP";
+  }
+  
+if(isset($_GET['login'])){
+  $title="Connexion | COGIP";
+  }
+?>  
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,12 +29,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="vue/assets/css/style.css">
-    <title>Document</title>
+    <title><?php echo "$title" ?></title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="?peopleRegister">Nouveau Contact</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="?home">Accueil</a>
             </li>

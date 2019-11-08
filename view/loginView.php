@@ -4,7 +4,7 @@
             <!-- Default form login -->
             <form class="text-center p-5 m-5" action="" method="post">
                 <h1>Bienvenue à la COGIP</h1>
-                <p class="h2 mb-4">Enrengistrez-vous</p>
+                <p class="h2 mb-4">Enregistrez-vous</p>
                 <!-- Username -->
                 <input type="text" name="username" id="username" class="form-control mb-4" placeholder="Votre Identifiant"
                     >

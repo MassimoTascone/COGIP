@@ -53,7 +53,7 @@ function createTable($fetchFrom){
         echo "<td> $value </td>";
         
         }
-      echo "<td><a href=?more>more info</a></td>" ;
+    
       echo "</tr>";
     }
   }
