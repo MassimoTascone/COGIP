@@ -28,39 +28,40 @@ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['em
           'fk_comp' => $fk_comp
         ));
         return $data_company_register;
-        //echo '<h1>les nouvelles donées ont été correctement enregistrées !</h1>';
+        echo '<h1>les nouvelles donées ont été correctement enregistrées !</h1>';
     }
 }
 
-// creer fonction request pour fk_comp de people
-// function getCompanyFromPeople()
-// {
-//  $conn = dbConnect();
-//  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
-//  $data_fk_comp = $conn->query(
-//          'SELECT name
-//          FROM company'
-//          );
-//         return $data_fk_comp;
-// }
+function getCompanyFromPeople()
+{
+ $conn = dbConnect();
+ $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+ $data_select_company = $conn->query(
+         'SELECT name
+         FROM company
+         ORDER BY id_company'
+         );
+        return $data_select_company;
+}
 
-// $displaylistCompany = getCompanyFromPeople();
-// var_dump($displaylistCompany);
+$displaylistCompany = getCompanyFromPeople();
+var_dump($displaylistCompany);
 
-
-$conn = dbConnect();
-$data_show_company = $conn->query('SELECT name FROM company ORDER BY id');
-
-// $getquery = $connection->prepare($query);
-// $getquery->execute();
+$companySelectNames = getData($displaylistCompany);
 
 function selectCompany($fetchFrom){
-        while($data = $getquery->fetch(PDO::FETCH_BOTH)){
-                $name = $rows['name'];
-                 echo $name;
+        while($data = $fetchFrom->fetch()){
+                //echo "<tr>";
+                foreach($data as $key => $value){
+                        echo '<option> '.$companySelectNames["name"]. '</option>';
+                }
+                //echo "</tr>";
         }
 }
 
+function getData($fetchFrom){
+        return $fetchFrom->fetch();
+}
 
 
 // var_dump($key);

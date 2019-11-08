@@ -29,14 +29,9 @@
           <div class="form-group">
            <label for="exampleFormControlSelect1">Société</label>
              <select class="form-control" id="exampleFormControlSelect1">
-            <option><?php selectCompany($name);?>></option>
-
-          <!-- <option><?php echo $displaylistCompany["name"];?></option> -->
-             <!-- <option value="<?php echo $displaylistCompany;?>">3</option>
-             <option value="<?php echo $displaylistCompany;?>">4</option>
-             <option value="<?php echo $displaylistCompany;?>">5</option> -->
-    </select>
-  </div>
+             <option><?php selectCompany(); ?> </option>    
+          </select>
+          </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
