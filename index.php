@@ -40,11 +40,7 @@ session_start();
       require('controller/homeAdminController.php');
 
     }
-
-
-    
-  
-
+    require('controller/accueilController.php');
     var_dump($_SESSION);
 
     
