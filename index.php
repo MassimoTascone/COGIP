@@ -1,12 +1,12 @@
-<?php 
-require('controller/headerController.php');
+<?php
+session_start();
+  if(isset($_GET['deco'])){
+    session_destroy();
+    unset($_SESSION);
+    require('controller/accueilController.php');
+  } 
 
-if(isset($_GET['peopleRegister'])){
-  require('controller/peopleRegisterController.php');
-}
-
-
-    if(isset($_GET['home'])){
+    if(isset($_GET['home']) and ($_SESSION == NULL)){
       require('controller/accueilController.php');
     }
   
@@ -16,7 +16,6 @@ if(isset($_GET['peopleRegister'])){
 
     if(isset($_GET['contact'])){
       require('controller/peopleController.php');
-      // require('controller/peopleElementController.php'); // juste pour test si la page fonctionne
       } 
 
     if(isset($_GET['company'])){
@@ -34,5 +33,19 @@ if(isset($_GET['peopleRegister'])){
     if(isset($_GET['contactDetail'])){
       require('controller/peopleElementController.php');
     }
+    
+    if($_SESSION['username']=='massimo'){
+      require('controller/homeAdminController.php');
+
+    }
+
+    
+  
+
+    var_dump($_SESSION);
+
+    
+
+
 
 require('controller/footerController.php');
