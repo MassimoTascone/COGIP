@@ -6,6 +6,8 @@ session_start();
     require('controller/accueilController.php');
   } 
 
+
+
     if(isset($_GET['home']) and ($_SESSION == NULL)){
       require('controller/accueilController.php');
     }
@@ -38,6 +40,8 @@ session_start();
       require('controller/homeAdminController.php');
 
     }
+    require('controller/accueilController.php');
+
 
     
   

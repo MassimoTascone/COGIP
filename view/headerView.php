@@ -24,9 +24,6 @@ function navbar() {
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="?peopleRegister">Nouveau Contact</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="?home">Accueil</a>
             </li>
             <li class="nav-item">
