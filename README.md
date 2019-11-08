@@ -1,6 +1,8 @@
 # COGIP
 
-[Git](https://github.com/MassimoTascone/COGIP)<br/>
+<img src="view/assets/img/cogip-logo.svg" width="400"/>
+
+[Repositorie GitHub](https://github.com/MassimoTascone/COGIP)<br/>
 
 ## Created by:
 
@@ -17,6 +19,8 @@
 - HTML
 - CSS
 - PHP
+- MySQL
+  <img src="view/assets/img/shemeBDD.png" width="400"/>
 
 ### Ressources:
 
