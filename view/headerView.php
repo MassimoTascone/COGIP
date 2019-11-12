@@ -21,8 +21,8 @@ if(isset($_GET['login'])){
 function navbar() {
   if ($_SESSION ==  NULL) {
     echo'
-    <nav class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-sm">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item">
                 <a class="nav-link" href="?home">Accueil</a>
             </li>
@@ -44,8 +44,8 @@ function navbar() {
   }
   else {
     echo '
-    <nav class="navbar navbar-expand-sm bg-light">
-      <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-sm">
+      <ul class="navbar-nav mx-auto">
           <li class="nav-item">
               <a class="nav-link" href="?home">Accueil Admin</a>
           </li>
@@ -80,7 +80,8 @@ function navbar() {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="vue/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="view/assets/css/style.css">
     <title><?php echo "$title" ?></title>
 </head>
 

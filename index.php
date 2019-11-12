@@ -6,11 +6,9 @@ session_start();
     require('controller/accueilController.php');
   } 
 
-
-
-    if(isset($_GET['home']) and ($_SESSION == NULL)){
-      require('controller/accueilController.php');
-    }
+    // if(isset($_GET['home']) and ($_SESSION == NULL)){
+    //   require('controller/accueilController.php');
+    // }
   
     if(isset($_GET['invoice'])){
     require('controller/invoiceController.php');
@@ -41,10 +39,8 @@ session_start();
 
     }
     require('controller/accueilController.php');
-    var_dump($_SESSION);
-
     
 
 
 
-require('controller/footerController.php');
+// require('controller/footerController.php');

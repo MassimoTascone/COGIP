@@ -15,7 +15,7 @@
                 </div>
                 <!-- Sign in button -->
                 <div class="text-center">
-                    <button class="btn btn-info  my-4" name="login" type="submit">Connexion</button>
+                    <button class="btn btn  my-4" name="login" type="submit">Connexion</button>
                 </div>
             </form>
         </div>

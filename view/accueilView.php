@@ -1,11 +1,11 @@
 <div class="container">
 
-    <h1>Bonjour !</h1>
+    <h1 class="mainTitle">COGIP</h1>
 
     <div class="row">
-        <div class="col-10">
+        <div class="col-12 col-md-8 offset-md-2">
 
-            <p>5 dernières Factures</p>
+            <h2>5 dernières Factures</h2>
             <table class="table border">
                 <th>Id</th>
                 <th>Numéro</th>
@@ -14,7 +14,7 @@
                 <?php createTable($invoiceAccueil); ?>
             </table>
 
-            <p>5 dernières Contatcs</p>
+            <h2>5 derniers Contacts</h2>
             <table class="table border">
                 <th>Id</th>
                 <th>Prénom</th>
@@ -24,7 +24,7 @@
                 <?php createTable($contactAccueil); ?>
             </table>
 
-            <p>5 dernières Sociétés</p>
+            <h2>5 dernières Sociétés</h2>
             <table class="table border">
                 <th>Id</th>
                 <th>Société</th>

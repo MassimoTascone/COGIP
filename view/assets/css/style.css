@@ -1,1 +1,51 @@
 /* CSS for COGIP */
+
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Lexend Exa', sans-serif;
+}
+
+/* Nav bar */
+
+a {
+    color: #6A4D25;
+    font-family: 'Lexend Exa', sans-serif;
+
+}
+
+a:hover {
+    color: rgb(165, 120, 58);
+}
+
+th {
+    background-color: #B8A26F;
+}
+
+
+
+.mainTitle {
+    font-size:74px;
+    font-family: 'Lexend Exa', sans-serif;
+    padding-bottom: 80px;
+    color:#B8A26F;
+}
+
+table {
+    -webkit-box-shadow: 9px 11px 22px -11px rgba(0,0,0,0.424);
+    -moz-box-shadow: 9px 11px 22px -11px rgba(0,0,0,0.424);
+    box-shadow: 9px 11px 22px -11px rgba(0, 0, 0, 0.424);
+}
+
+
+.btn {
+    background-color:#B8A26F;
+}
+.btn:hover {
+    background-color:rgb(236, 210, 148);
+}
+ 
+
+input {
+    background-color: rgb(195, 195, 195);
+}
