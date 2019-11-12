@@ -4,6 +4,7 @@ require_once('model/Manager.php');
 
 function getCompanyPeopleDetail(){
   if(isset($_GET['id'])){
+    $id = $_GET['id'];
   $conn = dbConnect();
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $data_company = $conn->query(
@@ -16,7 +17,8 @@ function getCompanyPeopleDetail(){
 }
 
 function getCompanyInvoiceDetail(){
-if(isset($_GET['id'])){{
+if(isset($_GET['id'])){
+  $id = $_GET['id'];
   $conn = dbConnect();
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $data_company = $conn->query(
@@ -27,6 +29,10 @@ if(isset($_GET['id'])){{
   return $data_company;
   }
 }
+
+
+
+
 
 $companyPeopleDetail = getCompanyPeopleDetail();
 $companyInvoiceDetail = getCompanyInvoiceDetail();
