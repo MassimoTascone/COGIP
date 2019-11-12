@@ -29,6 +29,7 @@ function createTable($fetchFrom){
       {
       echo "<td> $value </td>";
       }
+      echo '<td><a href="?companyDetail&id='.$data['id_company'].'">Détails</a></td>';
     echo "</tr>";
   }
 }

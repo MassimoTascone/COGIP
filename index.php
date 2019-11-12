@@ -35,4 +35,8 @@ if(isset($_GET['peopleRegister'])){
       require('controller/peopleElementController.php');
     }
 
+    if(isset($_GET['companyDetail'])){
+      require('controller/companyElementController.php');
+    }
+
 require('controller/footerController.php');
