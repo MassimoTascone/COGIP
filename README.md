@@ -28,7 +28,7 @@ You will find our Mockup created with Figma on this [link](https://www.figma.com
 - CSS
 - PHP
 - MySQL
-  Database connections : <img src="view/assets/img/shemeBDD.png" width="400"/>
+  Database connections : <img src="view/assets/img/schemeBDD.png" width="400"/>
 
 ### Ressources:
 
